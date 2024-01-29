@@ -1,0 +1,28 @@
+1)	Take 2 Wireless Router (WRT300N)
+2)	Use Copper Cross-Over
+3)	Wireless Router0 (Ethernet 1) – Wireless Router1 (Ethernet 1)
+
+4)	Click on Wireless Router0/1  GUI  Wireless 
+Basic Wireless Settings:
+Network Name (SSID): CS / IT
+Click on Save Settings
+
+Wireless Security:
+Security Mode: WPA2 Personal 
+Passphrase: ciscorouter1 / ciscorouter2
+Click on Save Settings
+
+5)	GUI  Administration 
+Remote Management: Enabled
+Click on Save Settings
+
+6)	Check connection by sending message.
+
+7)	Take 5 PC
+Turn OFF. Remove the bottom part. Add the bottom right part. Turn ON.
+
+8)	Click on PC 
+Desktop  PC Wireless  Connect  Refresh
+Select the network (CS / IT)
+Click on Connect
+Pre-shared Key: ciscorouter1/2
