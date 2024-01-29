@@ -1,0 +1,42 @@
+1)	Take 1 Server-PT, 3 PC, 1 Wireless Router (WRT300N)
+2)	Use Copper Straight-Through cable
+Server (FastEthernet0) --- Wireless Router (Ethernet 1)
+
+3)	Click on Server  Desktop  IP Configuration
+Select DHCP
+Add IP Address as label
+
+4)	Click on PC (for every PCs)
+Turn OFF
+Remove the bottom part
+Add the right bottom part
+Turn ON
+
+5)	Check Connection. Click on any PC  Desktop  Command Prompt
+ping 192.168.0.100
+Desktop  Web Browser
+192.168.0.100
+
+Click on Server  Desktop  IPv4 Firewall
+Turn ON
+
+Action: Deny
+Protocol: ICMP
+Remote IP: 0.0.0.0
+Remote Wildcard Mask: 255.255.255.255
+Click on Add
+
+Action: Allow
+Protocol: IP
+Remote IP: 0.0.0.0
+Remote Wildcard Mask: 255.255.255.255
+Click on Add
+
+6)	Check Connection. Click on any PC  Desktop  Command Prompt
+ping 192.168.0.100
+Desktop  Web Browser
+192.168.0.100
+
+
+
+ 
