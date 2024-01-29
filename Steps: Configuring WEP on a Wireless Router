@@ -1,0 +1,76 @@
+1) Take 2 PC, 2 Switch (2960), 2 Router (1841)
+2) Use Copper Straight-Through cable 
+3) PC0 (FastEthernet0) --- Switch0 (FastEthernet0/1)
+4) Switch0 (FastEthernet0/2) --- Router1 (FastEthernet0/0)
+5) PC1 (FastEthernet0) --- Switch1 (FastEthernet0/1)
+6) Switch1 (FastEthernet0/2) --- Router2 (FastEthernet0/0)
+7) Click on Router 1 & 2. Turn them OFF. 
+8) Add WIC-2T in right slot in both routers, and turn ON
+9) Use Serial DCE cable.
+10) Router1 (Serial0/0/0) --- Router2 (Serial0/0/0)
+11) Click on PC0 -> Desktop -> IP Configuration
+IPv4 Address: 192.168.1.2
+Default Gateway: 192.168.1.1
+12) Click on PC0 -> Desktop -> IP Configuration
+IPv4 Address: 192.168.2.2
+Default Gateway: 192.168.2.1
+13) Click on Router1  Config 
+ FastEthernet0/0
+IPv4 Address: 192.168.1.1
+Turn ON 
+ Serial0/0/0
+IPv4 Address: 10.0.0.1
+Clock Rate: 64000
+Turn ON
+14) Click on Router2  Config 
+ FastEthernet0/0
+IPv4 Address: 192.168.2.1
+Turn ON
+ Serial0/0/0
+IPv4 Address: 10.0.0.2
+Clock Rate: 64000
+Turn ON
+
+15) Click on Router 1 & 2  RIP  CLI
+Type: version 2
+
+16) Add RIP for Router1  Config  RIP
+10.0.0.0
+192.168.1.0
+
+Add RIP for Router2  Config  RIP
+10.0.0.0
+192.168.2.0
+
+17) Use Wireless Router (WRT300N)
+18) Use Copper Straight-Through cable 
+19) Switch0 (FastEthernet0/3)  WRT300N (Ethernet1)
+Router1 (FastEthernet0/1)  WRT300N (Ethernet2)
+
+20) Click on Router1  Config  FastEthernet0/1
+IPv4 Address: 20.0.0.1
+Turn ON 
+
+21) Click on Wireless Router  GUI  Setup
+IP Address: 192.168.1.1
+Click on Save Settings
+GUI  Wireless  Wireless Security
+Security Mode: WEP
+Key1: 2a2a2a2a2a
+Click on Save Settings
+
+22) Add PC
+Click on Physical. Turn it OFF
+Remove the part. Add the bottom part. Turn it ON
+
+23) Click on Config
+Wireless0
+Select WEP
+WEP Key: 2a2a2a2a2a
+
+24) Click on Router1
+Config  RIP
+Network: 20.0.0.0
+
+
+
